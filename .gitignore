@@ -1,4 +1,6 @@
 *.gdoc
 *.pdf
 *.ini
+*.mat
+*__pycache__
 /Data (1).gshortcut
