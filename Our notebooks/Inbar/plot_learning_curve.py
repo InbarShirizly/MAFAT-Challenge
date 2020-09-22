@@ -6,7 +6,6 @@ def plot_loss_and_accuracy_over_epoches(history):
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 12))
     ax1.plot(history.history['loss'], color='b', label="Training loss")
     ax1.plot(history.history['val_loss'], color='r', label="validation loss")
-    ax1.set_yticks(np.arange(0, 1, 0.1))
     ax1.set_title("Loss over epoches")
     ax1.grid()
     legend = ax1.legend(loc='best', shadow=True)

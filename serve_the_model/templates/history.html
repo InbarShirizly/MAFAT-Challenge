@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+{% for i in range_list %}
+    <div class="row justify-content-center mt-4">
+        <div class="col-sm-8">
+        <div class="card text-center">
+                <img src="{{ url_for('static', filename= 'segment_images/' + full_track_dict_list[i].name) }}" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Full track spectogram {{ full_track_dict_list[i].track_num }}</h5>
+                <h5 class="card-title">target: {{ full_track_dict_list[i].target }}</h5>
+              </div>
+          </div>
+          </div>
+    </div>
+
+     <div class="card-group">
+        {% for segment in segments_list[i] %}
+            <div class="card">
+                <img src="{{ url_for('static', filename= 'segment_images/' + segment.image_name) }}" class="card-img-top" style="width:50%">
+              <div class="card-body">
+                <h5 class="card-title">seg_id: {{ segment.segment_id }}</h5>
+                <p class="card-text">target: {{ segment.target }}</p>
+                <small class="card-text">pred: {{ segment.predictions }}</small>
+              </div>
+              <div class="card-footer">
+                  <small class="card-text">SNR: {{ segment.snr_type }} </small>
+              </div>
+          </div>
+        {% endfor %}
+    </div>
+
+{% endfor %}
+{% endblock content %}

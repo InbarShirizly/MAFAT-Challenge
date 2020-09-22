@@ -5,3 +5,9 @@
 *__pycache__
 /Data (1).gshortcut
 Data.gshortcut
+*.pkl
+*.ipynb_checkpoins
+/serve_the_model/python_scripts/.ipynb_checkpoints
+serve_the_model/.ipynb_checkpoints
+.idea
+*.docx
