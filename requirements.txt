@@ -20,8 +20,6 @@ Jinja2==2.11.2
 Keras-Preprocessing==1.1.2
 kiwisolver==1.2.0
 Markdown==3.2.2
-MarkupSafe @ file:///C:/ci/markupsafe_1594405949945/work
-matplotlib @ file:///C:/ci/matplotlib-base_1597858387645/work
 mkl-fft==1.2.0
 mkl-random==1.1.1
 mkl-service==2.3.0
@@ -29,8 +27,6 @@ numpy==1.18.5
 oauthlib==3.1.0
 olefile==0.46
 opt-einsum==3.3.0
-pandas @ file:///C:/ci/pandas_1598371525254/work
-Pillow @ file:///C:/ci/pillow_1594298234712/work
 protobuf==3.13.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
