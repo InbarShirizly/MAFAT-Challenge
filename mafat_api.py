@@ -12,19 +12,21 @@ import pickle
 import numpy as np
 import os
 from matplotlib.colors import LinearSegmentedColormap
-from python_scripts.utils import save_images_and_csv, generate_track_and_segments_data
+from serve_the_model.python_scripts.utils import save_images_and_csv, generate_track_and_segments_data
 
 # configuratiom constants
-UPLOAD_FOLDER = r".\uploaded_track_files"
-SEGMENTS_IMAGES_FOLDER = r".\static\segment_images"
+UPLOAD_FOLDER = r".\serve_the_model\uploaded_track_files"
+SEGMENTS_IMAGES_FOLDER = r".\serve_the_model\static\segment_images"
 ALLOWED_EXTENSIONS = ('pkl')
 
-color_map_path = "./data_train/cmap.npy"
+template_dir = os.path.abspath('./serve_the_model/templates')
+
+color_map_path = ".\serve_the_model/data_train/cmap.npy"
 cm_data = np.load(color_map_path)
 color_map = LinearSegmentedColormap.from_list('parula', cm_data)
 
 # flask app with configuration
-app = Flask(__name__)
+app = Flask(__name__, template_folder=template_dir)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['SEGMENTS_FOLDER'] = SEGMENTS_IMAGES_FOLDER
 app.config['SECRET_KEY'] = os.urandom(16)
