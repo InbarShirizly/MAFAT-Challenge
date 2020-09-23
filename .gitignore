@@ -11,3 +11,4 @@ Data.gshortcut
 serve_the_model/.ipynb_checkpoints
 .idea
 *.docx
+.vscode
