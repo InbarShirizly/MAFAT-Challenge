@@ -9,7 +9,8 @@ import os
 from tensorflow.keras.models import load_model
 
 
-MODEL_PATH = r".\serve_the_model\transfer_learning_model.h5"
+#MODEL_PATH = r".\serve_the_model\transfer_learning_model.h5"
+MODEL_PATH = r".\transfer_learning_model.h5"
 model = load_model(MODEL_PATH)
 
 
