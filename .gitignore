@@ -12,3 +12,9 @@ serve_the_model/.ipynb_checkpoints
 .idea
 *.docx
 .vscode
+*.png
+/Shared with Morris
+*.csv
+Our notebooks/saved_models/embeding_118_both.h5
+Our notebooks/saved_models/embeding_inbar_30_9.pickle
+Our notebooks/saved_models/embeding_inbar_test_data.pickle

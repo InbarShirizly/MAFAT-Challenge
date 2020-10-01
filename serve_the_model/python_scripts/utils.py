@@ -9,8 +9,7 @@ import os
 from tensorflow.keras.models import load_model
 
 
-#MODEL_PATH = r".\serve_the_model\transfer_learning_model.h5"
-MODEL_PATH = r".\transfer_learning_model.h5"
+MODEL_PATH = r".\vgg16_81.h5"
 model = load_model(MODEL_PATH)
 
 
@@ -44,6 +43,8 @@ def save_images_and_csv(app, track_dict):
                  track_dict['target_type'],
                  segments_predictions)),
         columns=["image_name", "segment_id", "snr_type", "target", "predictions"])
+
+    df['target_type'] = df["target"].apply(lambda x: app.config['target_dict'][x])
 
     df.sort_values(by=['segment_id'], inplace=True)
 
